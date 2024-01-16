@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Practice</title>
+
+</head>
+
+<body>
+    <p class='odd'>this is my P1</p>
+    <p id='second'>this is my P2</p>
+    <p class='odd'>this is my P3</p>
+    <p>this is my P4</p>
+    <button id='but'>Toggle now</button>
+    <div id='nirankari'>
+        Ideology is the fundamental idea that forms the bedrock of thoughts, words and actions of the individuals of a
+        community. The idea of being a nirankari is very simple, yet profound.
+    </div>
+    <form>
+      
+        <input id= 'inp' type = "text"> 
+        <textarea id = 'ta'>This is your value my text area</textarea>
+    </form>
+</body>
+
+<!-- <script scr = "js/jQuery.main.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // your jquery code here
+        // console.log($);
+        console.log("we are using jquery");
+        // $('selector').action()
+        // $('p').click();// click on p
+        // $('p').click(function () {
+        //     console.log('you clicked on p', this)
+        //     // $(this).hide();//$(#id).hide 
+        //     // $('.class')
+        // }); // do this when we click on 
+        // $('p').dblclick(function () {
+        //     console.log('you double clicked on p', this)
+        //     // $(this).hide();//$(#id).hide 
+        //     // $('.class')
+        // });
+        // $('p').hover(function () {
+        //     console.log('you  Hover ', this)
+        //     // $(this).hide();//$(#id).hide 
+        //     // $('.class')
+        // },
+        // function (){
+        //      console.log('Thanks for coming')
+        // }
+
+        // );
+
+        // $('#second').click();
+        //3
+        // $('.class').click();
+
+        // other selectors
+        // $('*').click();
+        // $('p.odd').click();
+        $('p:first').click();
+
+        // Events in jquery 
+        // Mouse events = click, doubleclick, mouoseenter, mouseleave
+        // keyboardEvent = keypress,  keydown, MediaKeyStatusMap
+        // formevents = submit, change, focus, blur
+        // document/window events = load, resize, scroll, unload 
+
+        // deming the ON Method 
+        $('p').on(
+            {
+                click: function () {
+                    console.log('Thanks for clicking', this);
+                },
+                mouseleave: function () {
+                    console.log("mouse leave");
+                }
+
+
+            })
+        // $('#nirankari').hide(1000, function(){
+        //     console.log("hidden");
+        // })
+        // $('#nirankari').show(1000, function(){
+        //     console.log("show");
+        // })
+        // $('#but').click(function () {
+        //     $('#nirankari').toggle(1000);
+        // })
+        // $('#but').click(function () {
+        //     $('#nirankari').fadeOut(5000);
+        // })
+        // fadeIn()
+        // fadeOut()
+        // fadeToggle()
+        // fadeTo()
+        
+        // Slides methods - speed and call back method are  optional 
+//         $('#nirankari').slideUp(1000, function (){
+//             console.log('done')
+// })
+// $('#nirankari').slideUp(1000)
+// $('#nirankari').slideToggle(1000)
+
+
+// Animate function in jquery
+// $('#nirankari').animate({
+//     opacity:0.3,
+//     height: '150px',
+//     width:'350px'
+// }, "fast")
+$('#nirankari').animate({opacity:0.3}, 4000)
+$('#nirankari').animate({opacity:0.9}, 4000)
+$('#nirankari').animate({width:'350px'},6000)
+
+// $('#nirankari').css('background-color','red')
+    });
+    </script>
+</html>
